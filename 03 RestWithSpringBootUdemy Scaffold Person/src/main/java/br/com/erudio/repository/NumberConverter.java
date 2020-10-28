@@ -1,4 +1,4 @@
-package br.com.erudio.request.converters;
+package br.com.erudio.repository;
 
 public class NumberConverter {
 
