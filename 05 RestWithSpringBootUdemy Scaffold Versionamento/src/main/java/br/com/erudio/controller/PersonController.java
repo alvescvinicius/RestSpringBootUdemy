@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.erudio.data.vo.PersonVO;
+import br.com.erudio.data.vo.v2.PersonVOV2;
 import br.com.erudio.service.PersonService;
 
 @RestController
@@ -36,6 +37,15 @@ public class PersonController {
 	@PostMapping
 	public PersonVO create(@RequestBody PersonVO person) {
 		return services.create(person);
+	}
+	
+	/*
+	 * Cria rota /person/v2 para nova versão do metódo create, 
+	 * mantendo a versão inicial em funcionamento.
+	 */
+	@PostMapping("/v2")
+	public PersonVOV2 createV2(@RequestBody PersonVOV2 person) {
+		return services.createV2(person);
 	}
 	
 	@PutMapping
