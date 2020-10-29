@@ -30,7 +30,7 @@ public class PersonService {
 	
 	public PersonVOV2 createV2(PersonVOV2 person) {
 		var entity = converter.convertVOToEntity(person);
-		var vo = converter.convertEntityToVO(entity);
+		var vo = converter.convertEntityToVO(repository.save(entity));
 		return vo;
 	}
 
