@@ -51,6 +51,13 @@
 			<artifactId>dozer-core</artifactId>
 			<version>6.4.1</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+		<!-- Não colocar version p/ ser herdado da versão do parent do springboot -->
+		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-core</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>

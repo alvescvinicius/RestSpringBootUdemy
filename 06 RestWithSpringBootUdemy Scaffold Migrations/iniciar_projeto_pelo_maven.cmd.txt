@@ -1,0 +1,2 @@
+REM Executado pelo Git Bash
+mvn clean package spring-boot:run
