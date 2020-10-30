@@ -1,0 +1,4 @@
+- Permitir uso da aplicação por JSON ou XML
+
+- Basta passar a extensão desejada na URL.
+Ex: No postman http://localhost:8080/api/person/v1.xml
