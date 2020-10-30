@@ -1,2 +1,5 @@
 REM Executado pelo Git Bash
 mvn clean package spring-boot:run
+
+REM Executar flyway migrate pelo maven
+mvn flyway:migrate
