@@ -14,7 +14,7 @@ public class WebConfig implements WebMvcConfigurer {
 	public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
 		
 	
-		/*
+		/* Via EXTENSION. http://localhost:8080/api/person.x-yaml
 		configurer.favorParameter(false)
 		.ignoreAcceptHeader(false)
 		.defaultContentType(MediaType.APPLICATION_JSON)
@@ -22,10 +22,20 @@ public class WebConfig implements WebMvcConfigurer {
 		.mediaType("xml", MediaType.APPLICATION_XML);
 		*/
 		
+		/* Via QUERY PARAM. http://localhost:8080/api/person/v1?mediaType=json
 		configurer.favorPathExtension(false)
 		.favorParameter(true)
 		.parameterName("mediaType")
 		.ignoreAcceptHeader(true)
+		.useRegisteredExtensionsOnly(false)
+		.defaultContentType(MediaType.APPLICATION_JSON)
+		.mediaType("json", MediaType.APPLICATION_JSON)
+		.mediaType("xml", MediaType.APPLICATION_XML);
+		*/
+		
+		configurer.favorPathExtension(false)
+		.favorParameter(false)
+		.ignoreAcceptHeader(false)
 		.useRegisteredExtensionsOnly(false)
 		.defaultContentType(MediaType.APPLICATION_JSON)
 		.mediaType("json", MediaType.APPLICATION_JSON)
