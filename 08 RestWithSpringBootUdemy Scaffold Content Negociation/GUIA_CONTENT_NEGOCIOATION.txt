@@ -2,3 +2,7 @@
 
 - Basta passar a extensão desejada na URL.
 Ex: No postman http://localhost:8080/api/person/v1.xml
+
+---------------------------------------------------------
+-- Usando query parameter
+Ex: no postman http://localhost:8080/api/person/v1?mediaType=json
