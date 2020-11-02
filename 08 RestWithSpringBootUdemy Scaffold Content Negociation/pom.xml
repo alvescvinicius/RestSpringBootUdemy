@@ -59,6 +59,13 @@
 		    <artifactId>jackson-dataformat-xml</artifactId>
 		</dependency>
 		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
+		<!-- Não colocar version p/ ser herdado da versão do parent do springboot -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.dataformat</groupId>
+		    <artifactId>jackson-dataformat-yaml</artifactId>
+		</dependency>
+		
 		
 		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 		<!-- Não colocar version p/ ser herdado da versão do parent do springboot -->
