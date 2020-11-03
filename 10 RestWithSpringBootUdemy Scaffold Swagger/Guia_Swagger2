@@ -3,3 +3,9 @@ http://localhost:8080/v2/api-docs
 
 # Para ver Swagger com UI:
 http://localhost:8080/swagger-ui.html
+
+# Para importar API no postman:
+Postman > import > Links > http://localhost:8080/v2/api-docs
+
+# No Postman em Collections será possivel ver nossa aplicação com 
+# todas as requisições e documentações geradas pelo Swagger2
