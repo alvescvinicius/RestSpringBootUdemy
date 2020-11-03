@@ -23,6 +23,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
 //@Api(value = "Person EndPoint", description = "Description for person", tags = {"PersonEndpoint"})
+//@CrossOrigin //Habilitar de forma global para este endpoint Person
 @Api(value = "Person EndPoint")
 @RestController
 @RequestMapping("/api/person/v1")
@@ -45,7 +46,7 @@ public class PersonController {
 		return persons;
 	}
 
-	@CrossOrigin(origins = "http://localhost:8080")
+	//@CrossOrigin(origins = "http://localhost:8080") // habilitar para metodo e origen especifica
 	@ApiOperation(value = "Find a specific person by your ID")
 	@GetMapping(value = "/{id}", produces = {"application/json","application/xml","application/x-yaml"})
 	public PersonVO findById(@PathVariable("id") Long id) {
@@ -55,7 +56,7 @@ public class PersonController {
 		
 	}
 	
-	@CrossOrigin(origins = {"http://localhost:8080","http://www.erudio.com.br"})
+	// @CrossOrigin(origins = {"http://localhost:8080","http://www.erudio.com.br"}) // habilitar para metodo e origen especifica
 	@ApiOperation(value = "Create a new person")
 	@PostMapping(produces = {"application/json","application/xml","application/x-yaml"},
 			     consumes = {"application/json","application/xml","application/x-yaml"})
