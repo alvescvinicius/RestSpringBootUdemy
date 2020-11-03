@@ -1,0 +1,5 @@
+# Para ver Swagger em Json:
+http://localhost:8080/v2/api-docs
+
+# Para ver Swagger com UI:
+http://localhost:8080/swagger-ui.html

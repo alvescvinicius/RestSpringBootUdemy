@@ -71,13 +71,26 @@
 		    <artifactId>jackson-dataformat-yaml</artifactId>
 		</dependency>
 		
-		
 		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
 		<!-- Não colocar version p/ ser herdado da versão do parent do springboot -->
 		<dependency>
 		    <groupId>org.flywaydb</groupId>
 		    <artifactId>flyway-core</artifactId>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.9.2</version>
+		</dependency>	
 
 		<dependency>
 			<groupId>junit</groupId>
