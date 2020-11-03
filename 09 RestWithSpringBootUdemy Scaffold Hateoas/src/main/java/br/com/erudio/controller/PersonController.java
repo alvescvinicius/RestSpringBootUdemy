@@ -28,7 +28,15 @@ public class PersonController {
 
 	@GetMapping(produces = {"application/json","application/xml","application/x-yaml"})
 	public List<PersonVO> findAll() {
-		return services.findAll();
+		List<PersonVO> persons = services.findAll();
+		persons
+		.stream()
+		.forEach(p -> p.add(
+				linkTo(methodOn(PersonController.class).findById(p.getKey())).withSelfRel()
+			)
+		);
+		
+		return persons;
 	}
 
 	@GetMapping(value = "/{id}", produces = {"application/json","application/xml","application/x-yaml"})
@@ -42,13 +50,17 @@ public class PersonController {
 	@PostMapping(produces = {"application/json","application/xml","application/x-yaml"},
 			     consumes = {"application/json","application/xml","application/x-yaml"})
 	public PersonVO create(@RequestBody PersonVO person) {
-		return services.create(person);
+		PersonVO personVO = services.create(person);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
+		return personVO;
 	}
 	
 	@PutMapping(produces = {"application/json","application/xml","application/x-yaml"},
 		        consumes = {"application/json","application/xml","application/x-yaml"})
 	public PersonVO update(@RequestBody PersonVO person) {
-		return services.update(person);
+		PersonVO personVO = update(person);
+		personVO.add(linkTo(methodOn(PersonController.class).findById(personVO.getKey())).withSelfRel());
+		return personVO;
 	}
 	
 	@DeleteMapping("/{id}")

@@ -4,15 +4,26 @@ import java.io.Serializable;
 
 import org.springframework.hateoas.ResourceSupport;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 
+/*
+ * Define a ordem dos atributos no corpo do JSON
+ */
+@JsonPropertyOrder({ "id", "address", "first_name", "last_name", "gender" })
 public class PersonVO extends ResourceSupport implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Mapping("id")
+	@JsonProperty("id")
 	private Long key;
+	
+	@JsonProperty("first_name")
 	private String firstName;
+	
+	@JsonProperty("last_name")
 	private String lastName;
 	private String address;
 	private String gender;
