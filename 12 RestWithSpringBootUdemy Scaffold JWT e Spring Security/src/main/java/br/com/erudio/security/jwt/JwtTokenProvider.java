@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.remoting.jaxws.JaxWsPortClientInterceptor;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -95,6 +94,5 @@ public class JwtTokenProvider {
 		} catch (Exception e) {
 			throw new InvalidJwtAuthenticationException("Expired or invalid token");
 		}
-	}
-	
+	}	
 }
