@@ -13,14 +13,14 @@ import br.com.erudio.security.jwt.JwtConfigurer;
 import br.com.erudio.security.jwt.JwtTokenProvider;
 
 @Configuration
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
+public class SecurityConfig extends WebSecurityConfigurerAdapter{
+	
 	@Autowired
 	private JwtTokenProvider tokenProvider;
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
-		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();  
+		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
 		return bCryptPasswordEncoder;
 	}
 	
@@ -37,11 +37,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 			.and()
 				.authorizeRequests()
-				.antMatchers("/auth/signin","/api-docs/**","swagger-ui.html**").permitAll()
+				.antMatchers("/auth/signin", "/api-docs/**", "/swagger-ui.html**").permitAll()
 				.antMatchers("/api/**").authenticated()
 				.antMatchers("/users").denyAll()
-				.and()
-					.apply(new JwtConfigurer(tokenProvider));
+			.and()
+			.apply(new JwtConfigurer(tokenProvider));
 	}
-	
+
 }

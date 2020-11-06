@@ -16,9 +16,9 @@ public class Startup {
 		SpringApplication.run(Startup.class, args);
 		
 		// Para gerar senha ao iniciar (testes)
-		//BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-		//String result = bCryptPasswordEncoder.encode("admin123");
-		//System.out.println("My hash" + result);
+		BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
+		String result = bCryptPasswordEncoder.encode("admin123");
+		System.out.println("My hash" + result);
 		
 	}
 	

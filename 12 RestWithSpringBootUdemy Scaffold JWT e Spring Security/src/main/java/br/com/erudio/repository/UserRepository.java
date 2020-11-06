@@ -8,14 +8,9 @@ import org.springframework.stereotype.Repository;
 import br.com.erudio.data.model.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Long>{
 	
-	/*
-	 * A implmentação deste repositorio é feita via JPQL para exemplo
-	 * Não é necessario ser implementada desta maneira
-	 */
-	
-	@Query("SELECT u FROM User u WHERE u.username :=userName")
-	User findByUsername(@Param("username") String username);
-	
+	@Query("SELECT u FROM User u WHERE u.userName =:userName")
+	User findByUsername(@Param("userName") String userName);
+
 }

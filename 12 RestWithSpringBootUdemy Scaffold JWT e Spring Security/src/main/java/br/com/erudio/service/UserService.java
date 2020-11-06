@@ -10,10 +10,10 @@ import br.com.erudio.repository.UserRepository;
 
 @Service
 public class UserService implements UserDetailsService {
-
+	
 	@Autowired
 	UserRepository repository;
-
+	
 	public UserService(UserRepository repository) {
 		this.repository = repository;
 	}
@@ -26,6 +26,7 @@ public class UserService implements UserDetailsService {
 		} else {
 			throw new UsernameNotFoundException("Username " + username + " not found");
 		}
+		
 	}
-
+		
 }
