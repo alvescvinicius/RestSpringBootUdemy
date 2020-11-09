@@ -17,6 +17,13 @@ public class UploadFileResponseVO extends ResourceSupport implements Serializabl
 
 	}
 
+	public UploadFileResponseVO(String fileName, String fileDownloadUri, String fileType, Long fileSize) {
+		this.fileName = fileName;
+		this.fileDownloadUri = fileDownloadUri;
+		this.fileType = fileType;
+		this.fileSize = fileSize;
+	}
+
 	public String getFileName() {
 		return fileName;
 	}

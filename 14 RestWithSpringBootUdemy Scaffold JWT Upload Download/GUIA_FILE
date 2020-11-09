@@ -1,0 +1,4 @@
+Upload post:
+http://localhost:8080/api/file/v1/uploadFile
+
+- setar corpo como form-data e adicionar variavle file do tipo file no postman
