@@ -23,6 +23,11 @@ public class PersonService {
 		var vo = DozerConverter.parseObject(repository.save(entity), PersonVO.class);
 		return vo;
 	}
+	
+	public Page<PersonVO> findPersonByName(String firstName, Pageable pageable) {
+		var page = repository.findPersonByName(firstName,pageable);
+		return page.map(this::convertToPersonVO);
+	}
 
 	public Page<PersonVO> findAll(Pageable pageable) {
 		var page = repository.findAll(pageable);
