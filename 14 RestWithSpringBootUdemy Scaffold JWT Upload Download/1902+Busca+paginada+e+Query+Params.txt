@@ -1,0 +1,9 @@
+https://en.wikipedia.org/wiki/Query_string
+
+https://www.mockaroo.com/
+
+Get - trazer só 5 resultados
+http://localhost:8080/api/person/v1?page=0&limit=5&direction=asc
+
+Get by name - be = string com nome para busca
+http://localhost:8080/api/person/v1/findPersonByName/be?page=0&limit=5&direction=asc
