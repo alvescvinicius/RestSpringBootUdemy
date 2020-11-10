@@ -1,0 +1,1 @@
+INSERT INTO `person` VALUES (1,'Minas','Flavia','Female','Alves'),(4,'Minas','Flavia','Female','Alves'),(6,'Minas','Flavia','Female','Alves'),(7,'Minas','Regina','Female','Alves'),(8,'Minas','RET','Female','Alves'),(9,'Minas','FER','Female','Alves');

@@ -1,0 +1,8 @@
+# Adicionado CORS nos métodos findall e findbyid de person de maneira que apenas os endereços informados podem acessar
+# estes metodos.
+
+# Para testar no postman pode adicioanr o header indicando qual dominio de origem usar:
+
+findById
+header -> Origin -> http://localhost:8080 -> 200 ok
+header -> Origin -> http://www.erudio.com.br -> Invalid CORS request
