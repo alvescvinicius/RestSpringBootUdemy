@@ -1,0 +1,13 @@
+*** ABRIR POWER SHELL NO DIRETORIO RAIZ DA APLICACAO ONDE TEM O docker-compose.yml
+
+-- Constroi projeto:
+
+docker-compose build
+
+-- Sobe containers:
+
+docker-compose up -d --build
+
+-- Para containers:
+
+docker-compose down

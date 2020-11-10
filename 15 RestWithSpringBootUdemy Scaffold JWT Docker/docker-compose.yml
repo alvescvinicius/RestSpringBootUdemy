@@ -6,22 +6,22 @@ services:
     restart: always
     build:
       context: .
-      dockerFile: Dockerfile
+      dockerfile: Dockerfile
     environment:
       TZ: America/Sao_Paulo
       MYSQL_ROOT_PASSWORD: developer
       MYSQL_USER: developer
       MYSQL_PASSWORD: developer
-      MYSQL_DATABSE: rest_rest_with_spring_boot_udemy
+      MYSQL_DATABASE: rest_with_spring_boot_udemy
     ports:
-      - "3308:3308"
+      - "3308:3306"
     networks:
       - udemy-network
   rest-with-spring-boot-udemy:
-    image: alvescvinicius/rest-rest-with-spring-boot-udemy
+    image: alvescvinicius/rest-with-spring-boot-udemy
     restart: always
-    build: ./RestSpringBootUdemy
-    work_dir: ./RestSpringBootUdemy
+    build: .\RestSpringBootUdemy
+    working_dir: /RestSpringBootUdemy
     environment:
       TZ: America/Sao_Paulo
       SPRING_BOOT_ENVIRONMENT: Production
@@ -35,7 +35,8 @@ services:
       - db
     depends_on:
       - db
-    networks: udemy-network
+    networks: 
+      - udemy-network
 networks:
     udemy-network:
         driver: bridge

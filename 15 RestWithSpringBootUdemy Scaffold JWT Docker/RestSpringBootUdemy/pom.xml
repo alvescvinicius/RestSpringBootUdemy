@@ -123,33 +123,6 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 			
-			<!-- Flyway plugin e config -->
-			<plugin>
-				<groupId>org.flywaydb</groupId>
-				<artifactId>flyway-maven-plugin</artifactId>
-				<configuration> 
-				    <!-- Substituir & por &amp; para ser reconhecido pelo maven   -->
-				    <!-- Desabilitar SSL - &amp;useSSL=false -->
-					<url>jdbc:mysql://localhost:3306/rest_with_spring_boot_udemy?useTimezone=true&amp;serverTimezone=UTC&amp;useSSL=false</url>
-					<user>developer</user>
-					<password>developer</password>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>mysql</groupId>
-						<artifactId>mysql-connector-java</artifactId>
-						<version>${mysql.version}</version>
-						<exclusions>
-							<exclusion>
-								<artifactId>slf4j-api</artifactId>
-								<groupId>org.slf4j</groupId>
-							</exclusion>
-						</exclusions>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<!-- Flyway plugin e config -->
-			
 		</plugins>
 	</build>
 </project>
