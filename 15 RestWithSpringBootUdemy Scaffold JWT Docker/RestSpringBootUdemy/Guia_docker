@@ -11,3 +11,11 @@ docker-compose up -d --build
 -- Para containers:
 
 docker-compose down
+
+-- Para subir imagem para o dockerHub:
+
+docker images
+
+docker login docker.io
+
+docker push 
