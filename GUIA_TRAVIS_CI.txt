@@ -1,0 +1,8 @@
+Criar arquivo .travis.yml no diretorio raiz do repositorio:
+
+Entrar no travis-ci e adicionar o repositorio do git hub:
+
+Ir em more options/settings e definir as variaveis do script:
+
+DOCKER_PASSWORD 
+DOCKER_USERNAME
