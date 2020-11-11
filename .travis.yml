@@ -1,7 +1,7 @@
 language: bash
 services: docker
 before_install:
-  - cd\ 15\ RestWithSpringBootUdemy\ Scaffold\ JWT\ Docker/
+  - cd 15\ RestWithSpringBootUdemy\ Scaffold\ JWT\ Docker/
   - echo "We are in the Docker folder!!!"
 script:
   - docker-compose build
@@ -13,6 +13,6 @@ deploy:
     docker push alvescvinicius/mysql-rest-with-spring-boot-udemy;
     docker push alvescvinicius/rest-with-spring-boot-udemy;
   on:
-    branch: master
+    branch: main
 notifications:
   email: false
